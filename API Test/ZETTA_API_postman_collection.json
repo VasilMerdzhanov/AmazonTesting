@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "2bd18df4-a2a1-4060-9182-88fb11f87e31",
+		"name": "ZETTA API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27146483"
+	},
+	"item": [
+		{
+			"name": "Get the number of posts for a user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"const path = response;\r",
+							"\r",
+							"pm.test(\"Testing number of posts by userId[5] = 10\", () => {\r",
+							"    //console.log(response);\r",
+							"    let numposts = 0;\r",
+							"\r",
+							"    path.forEach((user) => {\r",
+							"     if(user.userId === 5){\r",
+							"            numposts ++;\r",
+							"     } \r",
+							"    });\r",
+							"    //console.log(numposts);\r",
+							"    pm.expect(numposts).to.eql(10);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testing number of posts by userId[7] = 10\", () => {\r",
+							"    //console.log(response);\r",
+							"     let numposts = 0;\r",
+							"     path.forEach((user) => {\r",
+							"         if(user.userId === 7){\r",
+							"             numposts ++;\r",
+							"            } \r",
+							"        })\r",
+							"    pm.expect(numposts).to.eql(10);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testing number of posts by userId[9] = 10\", () => {\r",
+							"    //console.log(response);\r",
+							"    let numposts = 0;\r",
+							"    path.forEach((user) => {\r",
+							"        if(user.userId === 9){\r",
+							"            numposts ++;\r",
+							"        } \r",
+							"    })\r",
+							"    //console.log(numposts);\r",
+							"    pm.expect(numposts).to.eql(10);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/posts?userId=5&userId=7&userId=9",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "5"
+						},
+						{
+							"key": "userId",
+							"value": "7"
+						},
+						{
+							"key": "userId",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get unique ID per post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Testing unique ID per post: OK\", () => {\r",
+							"    // Get the response as an array of objects\r",
+							"    const posts = response;\r",
+							"\r",
+							"    // An array to store the encountered post IDs\r",
+							"    const postIds = [];\r",
+							"\r",
+							"    let hasOneNum = true;\r",
+							"    // Iterate through each post\r",
+							"    posts.forEach((post) => {\r",
+							"    const postId = post.id;\r",
+							"\r",
+							"     // Checking if the ID has already been encountered\r",
+							"     if (postIds.includes(postId)) {\r",
+							"        hasOneNum = false;\r",
+							"     }\r",
+							"    // Add the ID to the array\r",
+							"        postIds.push(postId);\r",
+							"    });\r",
+							"\r",
+							"    pm.expect(hasOneNum).to.eql(true);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://jsonplaceholder.typicode.com"
+		}
+	]
+}
