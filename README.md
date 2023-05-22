@@ -3,6 +3,7 @@
 zetta folder contains a project that has 2 classes corresponding to the first two tasks:
 1. Class AmazonTest - Acceptance criteria implementation
 2. Class AmazonCrawler - Simple Site Crawl 
+
 Also contains a list of all department links in this file <timestamp>_results.txt.
 
 -------------------------------------------------------------------------------------------
