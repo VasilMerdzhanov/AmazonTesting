@@ -1,1 +1,4 @@
+
+Use this Collection Access Key to access the collection JSON Via API:
+
 https://api.postman.com/collections/27146483-2bd18df4-a2a1-4060-9182-88fb11f87e31?access_key=PMAT-01H10153NMT1EKZ5T7EQ6ZBEAS

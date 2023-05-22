@@ -5,17 +5,17 @@
 1. Class AmazonTest - Acceptance criteria implementation
 2. Class AmazonCrawler - Simple Site Crawl 
 
-Also contains a list of all department links in this file <timestamp>_results.txt.
+And also in the Zetta folder is located a list of all department links in this file <timestamp>_results.txt.
 
-In this case, I used IntelliJ IDEA to do the first 2 tasks
+In this case, I used IntelliJ IDEA to solve the first 2 tasks of the assignment.
 
 -------------------------------------------------------------------------------------------
 
-##API Test folder contains two ways to share the collection:
+##The API Test folder contains two ways to access the collection where the API testing task is solved:
 --------------------------------------------------------------------------------------------
 1. Json file
-2. Collection access Key txt file
+2. Via API share.txt file - in which is located Collection Access Key endpoint
 
-In this case, I used Postman through the browser to do the tests
+I used Postman through the browser to do the tests
 
 
