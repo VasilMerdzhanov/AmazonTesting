@@ -11,5 +11,7 @@ Also contains a list of all department links in this file <timestamp>_results.tx
 API Test folder contains two ways to share the collection:
 1. Json file
 2. Collection access Key txt file
-------------------------------------------------------------------------------------------
+
 In this case, I used Postman through the browser to do the tests
+------------------------------------------------------------------------------------------
+
