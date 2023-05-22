@@ -16,6 +16,6 @@ In this case, I used IntelliJ IDEA to solve the first 2 tasks of the assignment.
 1. Json file
 2. Via API share.txt file - in which is located Collection Access Key endpoint
 
-I used Postman through the browser to do the tests
+I used Postman through the browser to do the tests.
 
 
